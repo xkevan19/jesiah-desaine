@@ -3,7 +3,7 @@ export async function handler() {
   const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
 
   try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/images?select=*`, {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/uploads?select=*`, {
       headers: {
         apikey: SUPABASE_ANON_KEY,
         Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
