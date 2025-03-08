@@ -1,0 +1,25 @@
+{
+    "name": "jesiah-desaine-portfolio",
+    "version": "1.0.0",
+    "description": "A frontend project using Supabase",
+    "scripts": {
+        "start": "npx serve",
+        "build": "echo 'No build process for this project'",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "supabase",
+        "frontend",
+        "javascript",
+        "html"
+    ],
+    "author": "Kevan",
+    "license": "MIT",
+    "dependencies": {
+        "@supabase/supabase-js": "^2.0.0",
+        "vite": "^6.2.1"
+    },
+    "devDependencies": {
+        "serve": "^14.0.0"
+    }
+}
