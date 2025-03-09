@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const images = await response.json();
+      console.log("Fetched images:", images);
       return images;
     } catch (error) {
       console.error("Error fetching images:", error);
@@ -44,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
         imgWrapper.classList.add("photo-wrapper");
 
         const imgElement = document.createElement("img");
-        imgElement.src = image.src;
+
+        imgElement.src = image.image_url;
         imgElement.alt = "Portfolio Image";
         imgElement.classList.add(
           "photo",
@@ -56,7 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "transition-all",
           "duration-100"
         );
-        imgElement.setAttribute("data-category", image.category);
+
+        imgElement.setAttribute("data-category", image.category.toLowerCase());
         imgElement.setAttribute("loading", "lazy");
 
         // Tilt Effect - Optimized for Speed
